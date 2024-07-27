@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './pages/home/home.component';
-import { AProposComponent } from './pages/util/a-propos/a-propos.component';
+import { HomeComponent } from './public/home/home/home.component';
+import { AProposComponent } from './public/a-propos/a-propos/a-propos.component';
 
 export const routes: Routes = [
   {
