@@ -1,3 +1,10 @@
+# Objectif du projet
+
+Ceci est un side-project, afin de m'entraîner à développer une application avec Angular, utilisant
+un API publique.
+
+Je vais répertorier des fleurs et permettre un accès selon divers critères : couleur, origine, famille...
+
 # Fleurs
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.0.
