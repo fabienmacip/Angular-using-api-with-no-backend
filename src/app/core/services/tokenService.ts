@@ -2,17 +2,20 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from '../../../environments/environment';
 import { Observable } from 'rxjs';
-import { PlantsList } from '../../shared/models/plants/plantsList';
 
 @Injectable({
   providedIn: 'root',
 })
-export class PlantsService {
+export class TokenService {
   constructor(private http: HttpClient) {}
 
-  getAllPlants(): Observable<PlantsList> {
-    return this.http.get<PlantsList>(`${environment.trefle.baseURL}/plants`, {
-      params: { token: environment.trefle.token },
+  getToken(): Observable<any> {
+    return this.http.post<any>(`${environment.trefle.baseURL}/auth/claim`, {
+      params: {
+        token: environment.trefle.token,
+        origin: environment.trefle.origin,
+        ip: null,
+      },
       headers: {
         'Access-Control-Allow-Origin': '*',
         'Content-Type': 'application/json',

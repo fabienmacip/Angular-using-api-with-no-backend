@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  padding: 1rem 6px;
+  background-color: lightgray;
+}
+
+nav {
+  padding: 6px;
+  background-color: gray;
+}
+
+main {
+  padding: 1rem 6px;
+  background-color: lightskyblue;
+}
+
+footer {
+  padding: 2rem 6px;
+
+  background-color: aqua;
+}
+
+#home,
+#a-propos {
+  padding: 6px;
+  background-color: lightpink;
+}
