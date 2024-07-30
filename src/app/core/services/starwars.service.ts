@@ -6,16 +6,11 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
-export class TokenService {
+export class StarWarsService {
   constructor(private http: HttpClient) {}
 
-  getToken(): Observable<any> {
-    return this.http.post<any>(`${environment.trefle.baseURL}auth/claim`, {
-      params: {
-        token: environment.trefle.token,
-        origin: environment.trefle.origin,
-        ip: null,
-      },
+  getAllFilms(): Observable<any> {
+    return this.http.get<any>(`${environment.starwars.baseURL}/films`, {
       headers: {
         'Access-Control-Allow-Origin': '*',
         'Content-Type': 'application/json',
