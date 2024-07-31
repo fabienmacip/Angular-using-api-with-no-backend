@@ -13,8 +13,10 @@ import { Post } from '../../../shared/models/sandbox/post';
   styleUrl: './api-call.component.css',
 })
 export class ApiCallComponent {
-  postsList$!: Observable<Posts>;
-  post2$!: Observable<Post>;
+  //postsList$!: Observable<Posts>;
+  postsList$!: Observable<any>;
+  //post2$!: Observable<Post>;
+  post2$!: Observable<any>;
 
   constructor(private sandboxService: SandboxService) {}
 

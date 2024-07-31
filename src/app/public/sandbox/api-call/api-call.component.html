@@ -1,12 +1,17 @@
 <div id="sandbox">
   <h1>SAND BOX</h1>
   <br />
-  @if (postsList$ | async; as Posts) {
-  {{ postsList$ }}
 
-  @for(post of postsList$ ; track post.id){
-  {{ post.id }}
-  } } @if(post2$ | async) {
+  @if(postsList$){
+  <ul>
+    @for(post of postsList$ | async ; track post.id){
+    <li>
+      {{ post.id }} - {{ post.title }}<br />
+      <img class="post-img" src="{{ post.image }}" />
+    </li>
+    }
+  </ul>
+  } @if(post2$ | async) {
   {{ post2$ }}
   }
 </div>
