@@ -35,6 +35,14 @@ footer {
 }
 
 section, p {
-  margin: 1rem 0;
+  padding: 1rem 0;
 }
 
+.loading {
+  padding: 1rem;
+  background-color: lightgrey;
+  font-weight: bold;
+  color: black;
+  border-radius: 5px;
+
+}

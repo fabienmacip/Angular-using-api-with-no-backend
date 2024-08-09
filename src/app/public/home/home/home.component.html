@@ -5,10 +5,15 @@
     sur le th&egrave;me de Chuck Norris. Enjoy !...
   </section>
 
+
   <section>
     @if (joke$ | async; as joke) {
     <p>Self link: {{ joke.url }}</p>
     <p>Joke : {{ joke.value }}</p>
+    } @else  {
+        <div class="loading">
+          Loading...
+        </div>
     }
   </section>
 

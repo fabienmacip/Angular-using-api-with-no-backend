@@ -1,0 +1,16 @@
+<div id="categories">
+  <h1>Cat&eacute;gories</h1>
+  <section>
+    @if (categories$ | async; as categories) {
+      <ul>
+        @for(category of categories; track category; let e = $even) {
+          <li [class.li-even]="e" [class.li-odd]="!e">{{ category }}</li>
+        }
+      </ul>
+    } @else {
+      <div class="loading">
+        Loading...
+      </div>
+    }
+  </section>
+</div>

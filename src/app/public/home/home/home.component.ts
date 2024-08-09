@@ -1,8 +1,8 @@
-import { AsyncPipe } from '@angular/common';
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
-import { JokesService } from '../../../core/services/jokes.service';
+import { AsyncPipe } from '@angular/common';
 import { Joke } from '../../../shared/models/jokes/joke';
+import { JokesService } from '../../../core/services/jokes.service';
 @Component({
   selector: 'app-home',
   standalone: true,
