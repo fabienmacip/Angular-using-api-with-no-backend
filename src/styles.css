@@ -8,22 +8,24 @@
 header {
   padding: 1rem 6px;
   background-color: lightgray;
+  text-align: center;
 }
 
 nav {
-  padding: 6px;
+  padding: 6px 0 6px 1rem;
   background-color: gray;
 }
 
 main {
   padding: 1rem 6px;
   background-color: lightskyblue;
+  text-align: center;
 }
 
 footer {
   padding: 2rem 6px;
-
   background-color: aqua;
+  text-align: center;
 }
 
 #home,
@@ -31,3 +33,8 @@ footer {
   padding: 6px;
   background-color: lightpink;
 }
+
+section, p {
+  margin: 1rem 0;
+}
+

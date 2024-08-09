@@ -1,21 +1,15 @@
 <div id="home">
-  <h1>Accueil - Fleurs</h1>
+  <h1>Accueil - Chuch Norris Jokes</h1>
   <section>
-    Bienvenue sur l'application qui vous permet de chercher toutes les fleurs
-    r&eacute;pertori&eacute;es dans le monde entier. Enjoy !...
+    Bienvenue sur l'application qui vous permet de naviguer parmi les blagues
+    sur le th&egrave;me de Chuck Norris. Enjoy !...
   </section>
 
   <section>
-    @if (plantsList$ | async; as plantsList) {
-    <p>Self link: {{ plantsList.links.self }}</p>
-    <p>Meta: {{ plantsList.meta.total }}</p>
+    @if (joke$ | async; as joke) {
+    <p>Self link: {{ joke.url }}</p>
+    <p>Joke : {{ joke.value }}</p>
     }
   </section>
-  <section>
-    <br />
-    TEST Récupération du TOKEN public @if (tokenTest$ | async) {
-    <p>Token : {{ tokenTest$ }}</p>
 
-    }
-  </section>
 </div>

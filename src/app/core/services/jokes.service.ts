@@ -2,17 +2,16 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from '../../../environments/environment';
 import { Observable } from 'rxjs';
-import { PlantsList } from '../../shared/models/plants/plantsList';
+import { Joke } from '../../shared/models/jokes/joke';
 
 @Injectable({
   providedIn: 'root',
 })
-export class PlantsService {
+export class JokesService {
   constructor(private http: HttpClient) {}
 
-  getAllPlants(): Observable<PlantsList> {
-    return this.http.get<PlantsList>(`${environment.trefle.baseURL}/plants`, {
-      params: { token: environment.trefle.token },
+  getRandomJoke(): Observable<Joke> {
+    return this.http.get<Joke>(`${environment.apiURL}jokes/random`, {
       headers: {
         'Access-Control-Allow-Origin': '*',
         'Content-Type': 'application/json',

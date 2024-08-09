@@ -1,10 +1,8 @@
 import { AsyncPipe } from '@angular/common';
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
-import { PlantsList } from '../../../shared/models/plants/plantsList';
-import { PlantsService } from '../../../core/services/plants.service';
-import { TokenService } from '../../../core/services/tokenService';
-
+import { JokesService } from '../../../core/services/jokes.service';
+import { Joke } from '../../../shared/models/jokes/joke';
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -13,17 +11,13 @@ import { TokenService } from '../../../core/services/tokenService';
   styleUrl: './home.component.css',
 })
 export class HomeComponent {
-  plantsList$!: Observable<PlantsList>;
-
-  tokenTest$!: Observable<any>;
+  joke$!: Observable<Joke>;
 
   constructor(
-    private plantsService: PlantsService,
-    private tokenTest: TokenService
+    private jokeService: JokesService
   ) {}
 
   ngOnInit(): void {
-    this.plantsList$ = this.plantsService.getAllPlants();
-    this.tokenTest$ = this.tokenTest.getToken();
+    this.joke$ = this.jokeService.getRandomJoke();
   }
 }

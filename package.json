@@ -1,5 +1,5 @@
 {
-  "name": "fleurs",
+  "name": "using-api-no-backend",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -34,5 +34,17 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "typescript": "~5.5.2"
-  }
+  },
+  "description": "Ceci est un side-project, afin de m'entraîner à développer une application avec Angular, utilisant\r un API publique, ne nécessitant pas l'usage d'un backend.",
+  "main": "main.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fabienmacip/Angular-using-api-with-no-backend.git"
+  },
+  "author": "Fabien Macip",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fabienmacip/Angular-using-api-with-no-backend/issues"
+  },
+  "homepage": "https://github.com/fabienmacip/Angular-using-api-with-no-backend#readme"
 }
