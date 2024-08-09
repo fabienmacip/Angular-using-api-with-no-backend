@@ -6,7 +6,16 @@
   background-color: lightgreen;
 }
 
+ul  {
+  text-align: center;
+}
+
 li {
   padding: 6px;
   font-size: 1.2rem;
+  display: inline-block;
+  width: 6rem;
+  text-align : center;
+  border: 1px solid gray;
+  cursor: pointer;
 }

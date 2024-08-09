@@ -8,8 +8,7 @@
 
   <section>
     @if (joke$ | async; as joke) {
-    <p>Self link: {{ joke.url }}</p>
-    <p>Joke : {{ joke.value }}</p>
+      <app-joke [joke]="joke"></app-joke>
     } @else  {
         <div class="loading">
           Loading...

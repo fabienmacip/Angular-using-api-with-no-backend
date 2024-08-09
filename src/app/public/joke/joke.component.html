@@ -1,0 +1,31 @@
+<div class="joke">
+  <div>
+    Cat&eacute;gorie :
+    @if(joke.categories.length === 0) {
+      Aucune cat&eacute;gorie
+     } @else {
+       @for(cat of joke.categories; track $index; let l = $last) {
+        {{ cat }}
+        @if(!l){
+          ,
+        }
+       }
+     }
+  </div>
+  <div>
+    Identifiant : {{ joke.id }}<br>
+  </div>
+  <div>
+    Cr&eacute;é le : {{ joke.created_at }}<br>
+  </div>
+  <div>
+    Modifi&eacute;e le : {{ joke.updated_at }}<br>
+  </div>
+  <div>
+    ICON URL : {{ joke.icon_url }}<br>
+  </div>
+  <div>
+    Texte : {{ joke.value }}<br>
+  </div>
+
+</div>

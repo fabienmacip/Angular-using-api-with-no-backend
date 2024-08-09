@@ -3,10 +3,11 @@ import { Observable } from 'rxjs';
 import { AsyncPipe } from '@angular/common';
 import { Joke } from '../../../shared/models/jokes/joke';
 import { JokesService } from '../../../core/services/jokes.service';
+import { JokeComponent } from '../../joke/joke.component';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [AsyncPipe],
+  imports: [AsyncPipe, JokeComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })

@@ -1,0 +1,19 @@
+<section>
+  @if(category === ''){
+    Vous n'avez pas encore choisi de cat&eacute;gorie.
+  } @else {
+    Vous avez choisi la cat&eacute;gorie <b>{{ category }}</b>.
+  }
+</section>
+
+<section>
+  @if(categoryJoke$ | async; as joke) {
+    <app-joke [joke]="joke"></app-joke>
+  } @else {
+    @if(category === ''){
+      Choisissez une cat&eacute;gorie pour afficher une JOKE...
+    } @else {
+      <div class="loading">Loading...</div>
+    }
+  }
+</section>

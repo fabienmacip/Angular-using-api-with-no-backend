@@ -4,7 +4,7 @@
     @if (categories$ | async; as categories) {
       <ul>
         @for(category of categories; track category; let e = $even) {
-          <li [class.li-even]="e" [class.li-odd]="!e">{{ category }}</li>
+          <li (click)="fecthJoke(category)" [class.li-even]="e" [class.li-odd]="!e">{{ category }}</li>
         }
       </ul>
     } @else {
@@ -12,5 +12,8 @@
         Loading...
       </div>
     }
+  </section>
+  <section>
+    <app-category-jokes category={{selectedCategory}}></app-category-jokes>
   </section>
 </div>

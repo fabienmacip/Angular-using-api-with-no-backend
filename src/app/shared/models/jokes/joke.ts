@@ -3,7 +3,7 @@ export class Joke {
   created_at: string;
   id: string;
   updated_at: string;
-  url: string;
+  icon_url: string;
   value: string;
 
   constructor(
@@ -11,14 +11,14 @@ export class Joke {
     created_at?: string,
     id?: string,
     updated_at?: string,
-    url?: string,
+    icon_url?: string,
     value?: string
   ) {
       this.categories = categories || [];
       this.created_at = created_at || '';
       this.id = id || '';
       this.updated_at = updated_at || '';
-      this.url = url || '';
+      this.icon_url = icon_url || '';
       this.value = value || '';
     }
 }
