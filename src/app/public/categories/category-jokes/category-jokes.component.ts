@@ -21,7 +21,9 @@ export class CategoryJokesComponent {
   constructor(private categoriesService: CategoriesService){}
 
   ngOnInit() {
-    this.getJoke()
+    if(this.category !== '') {
+      this.getJoke()
+    }
   }
 
   getJoke(){

@@ -46,3 +46,9 @@ section, p {
   border-radius: 5px;
 
 }
+
+.joke-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}

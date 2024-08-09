@@ -7,13 +7,17 @@
 </section>
 
 <section>
-  @if(categoryJoke$ | async; as joke) {
-    <app-joke [joke]="joke"></app-joke>
+  @if(category === ''){
+    Choisissez une cat&eacute;gorie pour afficher une JOKE...
   } @else {
-    @if(category === ''){
-      Choisissez une cat&eacute;gorie pour afficher une JOKE...
+    @if(categoryJoke$ | async; as joke) {
+      <app-joke [joke]="joke"></app-joke>
     } @else {
       <div class="loading">Loading...</div>
     }
-  }
+}
+
+
+
+
 </section>

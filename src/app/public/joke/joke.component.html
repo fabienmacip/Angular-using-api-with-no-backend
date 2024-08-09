@@ -1,31 +1,38 @@
 <div class="joke">
   <div>
-    Cat&eacute;gorie :
-    @if(joke.categories.length === 0) {
-      Aucune cat&eacute;gorie
-     } @else {
-       @for(cat of joke.categories; track $index; let l = $last) {
-        {{ cat }}
-        @if(!l){
-          ,
-        }
+    <div>
+      <img src="{{ joke.icon_url }}" alt="icone">
+    </div>
+    <div>
+      Cat&eacute;gorie(s) :<br>
+      @if(joke.categories.length === 0) {
+        Aucune cat&eacute;gorie
+       } @else {
+         @for(cat of joke.categories; track $index; let l = $last) {
+          {{ cat }}
+          @if(!l){
+            ,
+          }
+         }
        }
-     }
+    </div>
   </div>
+
   <div>
-    Identifiant : {{ joke.id }}<br>
+    Identifiant : {{ joke.id }}
   </div>
+
   <div>
-    Cr&eacute;é le : {{ joke.created_at }}<br>
+    <div>
+      Cr&eacute;é le : {{ joke.created_at | date:"dd MMM YYYY"}}
+    </div>
+    <div>
+      Modifi&eacute;e le : {{ joke.updated_at | date:"dd MMM YYYY"}}
+    </div>
   </div>
+
   <div>
-    Modifi&eacute;e le : {{ joke.updated_at }}<br>
-  </div>
-  <div>
-    ICON URL : {{ joke.icon_url }}<br>
-  </div>
-  <div>
-    Texte : {{ joke.value }}<br>
+    {{ joke.value }}
   </div>
 
 </div>

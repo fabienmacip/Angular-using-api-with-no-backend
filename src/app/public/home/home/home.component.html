@@ -6,7 +6,7 @@
   </section>
 
 
-  <section>
+  <section class="joke-container">
     @if (joke$ | async; as joke) {
       <app-joke [joke]="joke"></app-joke>
     } @else  {
