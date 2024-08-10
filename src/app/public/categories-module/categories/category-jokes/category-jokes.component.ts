@@ -1,9 +1,9 @@
 import { Component, Input } from '@angular/core';
-import { CategoriesService } from '../../../core/services/categories.service';
+import { CategoriesService } from '../../../../core/services/categories.service';
 import { Observable } from 'rxjs';
-import { Joke } from '../../../shared/models/jokes/joke';
+import { Joke } from '../../../../shared/models/jokes/joke';
 import { AsyncPipe } from '@angular/common';
-import { JokeComponent } from '../../joke/joke.component';
+import { JokeComponent } from '../../../joke/joke.component';
 
 @Component({
   selector: 'app-category-jokes',

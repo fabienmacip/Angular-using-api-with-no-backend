@@ -1,7 +1,5 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './public/home/home/home.component';
-import { AProposComponent } from './public/a-propos/a-propos/a-propos.component';
-import { CategoriesComponent } from './public/categories/categories.component';
 
 export const routes: Routes = [
   {
@@ -11,13 +9,13 @@ export const routes: Routes = [
   },
   {
     path: 'a-propos',
-    title: 'A propos',
-    component: AProposComponent,
+    loadChildren: () => import('./public/a-propos-module/a-propos.module')
+      .then(m => m.AProposModule)
   },
   {
     path: 'categories',
-    title: 'Catégories',
-    component: CategoriesComponent,
-  },
+    loadChildren: () => import('./public/categories-module/categories.module')
+      .then(m => m.CategoriesModule)
 
+  }
 ];

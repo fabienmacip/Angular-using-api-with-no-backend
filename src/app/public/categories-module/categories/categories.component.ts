@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import { AsyncPipe, JsonPipe } from '@angular/common';
-//import { Category } from '../../shared/models/jokes/category';
-import { CategoriesService } from '../../core/services/categories.service';
+import { CategoriesService } from '../../../core/services/categories.service';
 import { CategoryJokesComponent } from './category-jokes/category-jokes.component';
 
 @Component({
