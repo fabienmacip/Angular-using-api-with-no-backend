@@ -19,6 +19,14 @@ export class HomeComponent {
   ) {}
 
   ngOnInit(): void {
+    this.getRandomJoke();
+  }
+
+  getRandomJoke(){
     this.joke$ = this.jokeService.getRandomJoke();
+  }
+
+  showAnotherCard(){
+    this.getRandomJoke();
   }
 }

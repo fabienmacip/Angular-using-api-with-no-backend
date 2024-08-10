@@ -5,6 +5,9 @@
     sur le th&egrave;me de Chuck Norris. Enjoy !...
   </section>
 
+  <section>
+    <button (click)="showAnotherCard()" class="btn btn-primary">Une autre JOKE</button>
+  </section>
 
   <section class="joke-container">
     @if (joke$ | async; as joke) {
