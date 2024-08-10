@@ -4,6 +4,7 @@ import { NavComponent } from './core/components/nav/nav.component';
 import { HeaderComponent } from './core/components/header/header.component';
 import { FooterComponent } from './core/components/footer/footer.component';
 import { MainComponent } from './core/components/main/main.component';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +15,7 @@ import { MainComponent } from './core/components/main/main.component';
     HeaderComponent,
     FooterComponent,
     MainComponent,
+    FormsModule
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

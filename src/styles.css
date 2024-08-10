@@ -74,3 +74,19 @@ section, p {
   border-color: white;
   background-color: rgb(23, 23, 255);
 }
+
+.tc {
+  text-align: center;
+}
+
+.form-input {
+  font-size: 1.1rem;
+  text-align: left;
+  padding: 6px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}

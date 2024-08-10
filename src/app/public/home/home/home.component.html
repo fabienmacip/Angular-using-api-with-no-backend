@@ -5,18 +5,27 @@
     sur le th&egrave;me de Chuck Norris. Enjoy !...
   </section>
 
-  <section>
+  <section class="tc">
     <button (click)="showAnotherCard()" class="btn btn-primary">Une autre JOKE</button>
+    <app-search-joke-form (jokesFound)="onJokesFound($event)"></app-search-joke-form>
   </section>
+  
+  @if(!jokesSearching){
+    <section class="joke-container">
+      @if (joke$ | async; as joke) {
+        <app-joke [joke]="joke"></app-joke>
+      } @else  {
+          <div class="loading">
+            Loading...
+          </div>
+      }
+    </section>
+  } @else {
+    <section>
+      <app-show-jokes-found [totalFoundJokes]="totalFoundJokes" [jokes]="jokes"></app-show-jokes-found>
+    </section>
+  }
 
-  <section class="joke-container">
-    @if (joke$ | async; as joke) {
-      <app-joke [joke]="joke"></app-joke>
-    } @else  {
-        <div class="loading">
-          Loading...
-        </div>
-    }
-  </section>
+
 
 </div>

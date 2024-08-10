@@ -1,0 +1,12 @@
+<h3>You're looking for jokes...</h3>
+@if(totalFoundJokes > 0){
+  <h3>WE'VE FOUND <b>{{ totalFoundJokes }}</b> JOKES !!!</h3>
+  @for(joke of jokes; track joke.id){
+    <pre>{{ joke.id }}</pre>
+    <pre>{{ joke.value }}</pre>
+    <br>
+
+  }
+} @else {
+  <h3>No Joke loaded for the moment...</h3>
+}

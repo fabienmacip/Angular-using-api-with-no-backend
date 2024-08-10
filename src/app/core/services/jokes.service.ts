@@ -18,4 +18,13 @@ export class JokesService {
       },
     });
   }
+
+  searchJokes(search: string): Observable<any> {
+    return this.http.get<any>(`${environment.apiURL}jokes/search?query=${search}`, {
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Content-Type': 'application/json',
+      },
+    });
+  }
 }
