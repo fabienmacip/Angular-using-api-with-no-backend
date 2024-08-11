@@ -1,0 +1,28 @@
+#ul-jokes-found > li {
+  padding: 6px 12px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  column-gap: 10px;
+}
+
+#show-jokes-nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  column-gap: 6px;
+}
+
+#show-jokes-nav > button {
+  width: 35px;
+}
+
+.even-joke {
+  background-color: lightgrey;
+}
+
+.odd-joke {
+  background-color: rgb(160,160,160);
+}

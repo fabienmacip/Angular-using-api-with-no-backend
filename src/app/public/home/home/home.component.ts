@@ -40,5 +40,5 @@ export class HomeComponent {
     this.totalFoundJokes = jokes.total;
     this.jokes = jokes.result;
     this.jokesSearching = true;
-  }
+ }
 }

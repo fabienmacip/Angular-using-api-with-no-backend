@@ -1,12 +1,31 @@
 <h3>You're looking for jokes...</h3>
 @if(totalFoundJokes > 0){
-  <h3>WE'VE FOUND <b>{{ totalFoundJokes }}</b> JOKES !!!</h3>
-  @for(joke of jokes; track joke.id){
-    <pre>{{ joke.id }}</pre>
-    <pre>{{ joke.value }}</pre>
-    <br>
-
-  }
+  <h3>WE'VE FOUND <b style="background-color: red; color: white;">&nbsp;{{ totalFoundJokes }}&nbsp;</b> JOKES !!!</h3>
+  <br>
+  <ul id="ul-jokes-found">
+    @for(joke of jokes | slice:currentBegin:currentEnd ;
+          track joke.id;
+          let i = $index;
+          let e = $even;
+          let o = $odd) {
+      <li [class.even-joke]="e"
+          [class.odd-joke]="o"
+      >
+        <div>{{ currentBegin + i + 1 }}</div>
+        <div>
+          <span style="font-size: 0.8rem;">{{ joke.id }}</span> -
+          <i>"{{ joke.value }}"</i>
+        </div>
+      </li>
+    }
+  </ul>
+  <br>
+  <div id="show-jokes-nav">
+    <button class="btn btn-neutral" (click)="loadJokes(0)"><<</button>
+    <button class="btn btn-neutral" (click)="loadJokes(currentBegin - 10)"><</button> |
+    <button class="btn btn-neutral" (click)="loadJokes(currentBegin + 10)">></button>
+    <button class="btn btn-neutral" (click)="loadJokes(lastScreenBegin)">>></button>
+  </div>
 } @else {
   <h3>No Joke loaded for the moment...</h3>
 }
